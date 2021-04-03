@@ -2,14 +2,17 @@
 A bot that calculate the time remaining for preparing dse and send it to discord server.
 
 
+
 # Working principle #
 
 1. It calculates the difference between the dse date and time now.
 2. Then, it appends the text to a random background image and send it out.
 
 
+
 # Sample #
-<img width="738" alt="Screenshot 2021-04-04 at 01 45 12" src="https://user-images.githubusercontent.com/53013464/113486888-84b8ec80-94e7-11eb-9437-ce04f09c5d17.png">
+<img width="495" alt="Screenshot 2021-04-04 at 01 52 58" src="https://user-images.githubusercontent.com/53013464/113487075-7e774000-94e8-11eb-8271-dc3dd0946f58.png">
+
 
 
 #### Using replit & uptimerobot ####
