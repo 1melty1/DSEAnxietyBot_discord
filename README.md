@@ -1,4 +1,6 @@
 # DSEAnxietyBot_discord
+A bot that calculate the time remaining for preparing dse and send it to discord server.
+
 
 # Working principle #
 
