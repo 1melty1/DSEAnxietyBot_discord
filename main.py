@@ -23,9 +23,9 @@ async def on_message(message):
         print(dse_2022 - time_now_hk)
         diff = (dse_2022 - time_now_hk).total_seconds()
         line1 = "Time left 2022 dse"
-        line2 = str(diff // (3600*24))  + " days "
-        line3 = str(diff%(3600*24)//3600) + " Hours "
-        line4 = str(diff%(3600*24)%3600//60) + " Minutes"
+        line2 = str(int(diff // (3600*24)))  + " days "
+        line3 = str(int(diff%(3600*24)//3600)) + " Hours "
+        line4 = str(int(diff%(3600*24)%3600//60)) + " Minutes"
         #2022 dse: 31/3/2022 8:30am
 
         #image processing
