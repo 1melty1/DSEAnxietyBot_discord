@@ -15,7 +15,7 @@ A bot that calculate the time remaining for preparing dse and send it to discord
 
 
 
-### Update ###
+## Updates ##
 4-4-2021 15:00
 *blurred & random background
 </br>
