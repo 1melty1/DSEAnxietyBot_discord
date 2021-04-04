@@ -1,5 +1,5 @@
 import discord
-import os, random
+import os, random, time
 from datetime import datetime, timedelta
 from refresh import keep_alive
 from PIL import Image, ImageFont, ImageDraw, ImageFilter
@@ -34,6 +34,8 @@ async def on_message(message):
         line4 = str(int(diff%(3600*24)%3600//60)) + " Minutes"
         #2022 dse: 31/3/2022 8:30am
 
+        loading_message = await message.channel.send('Appending text into Image... plz wait') #send loading message
+        time.sleep(10) #delete loading message
         #image processing
         #img_path = "resources/background" + str(counter) + ".jpg"
         img_path = random.choice(os.listdir("resources/")) #choose randome background
@@ -49,10 +51,14 @@ async def on_message(message):
         draw.text((20, height//5*4), line4, (255,255,255),font=font)
         blurred_img.save('output.png') #use png as jpg and png can both be converted into png
 
+        await loading_message.delete() #delete the message before sending image
+
         #await message.channel.send(text)
 
         await message.channel.send(file=discord.File('output.png'))
         os.remove("output.png")
+
+
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
