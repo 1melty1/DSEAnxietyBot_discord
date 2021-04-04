@@ -13,7 +13,9 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-    await client.change_presence(activity=discord.Game(name=' ?dse'))
+    await client.change_presence(activity=discord.Game(name=f"in {len(client.guilds)} servers| $dse"))
+
+
 
 @client.event
 async def on_message(message):
@@ -38,7 +40,7 @@ async def on_message(message):
         print(img_path)
         img = Image.open(img_path)
         width, height = img.size
-        blurred_img = img.filter(ImageFilter.GaussianBlur(radius = 25))
+        blurred_img = img.filter(ImageFilter.GaussianBlur(radius = 20))
         font = ImageFont.truetype('futura.ttf', width//10)
         draw = ImageDraw.Draw(blurred_img)
         draw.text((20, height//5), line1, (255,255,255),font=font)
