@@ -18,10 +18,11 @@ A bot that calculate the time remaining for preparing dse and send it to discord
 ### Update ###
 4-4-2021 15:00
 *blurred & random background
-![image](https://user-images.githubusercontent.com/53013464/113501005-e95e6080-9554-11eb-8d61-d55edb346178.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/53013464/113501005-e95e6080-9554-11eb-8d61-d55edb346178.png" width="500">
 
 *bot status update
-![image](https://user-images.githubusercontent.com/53013464/113501040-2aef0b80-9555-11eb-8262-6b6259b3ae53.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/53013464/113501040-2aef0b80-9555-11eb-8262-6b6259b3ae53.png" width="500">
+
 
 #### Using replit & uptimerobot ####
 Tutorial used:
