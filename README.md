@@ -15,15 +15,6 @@ A bot that calculate the time remaining for preparing dse and send it to discord
 
 
 
-#### Using replit & uptimerobot ####
-Tutorial used:
-https://www.youtube.com/watch?v=SPTfmiYiuok
-
-
-
-4-4-2021 01:43
-4.5 hrs
-
 ### Update ###
 4-4-2021 15:00
 *blurred & random background
@@ -32,3 +23,11 @@ https://www.youtube.com/watch?v=SPTfmiYiuok
 *bot status update
 ![image](https://user-images.githubusercontent.com/53013464/113501040-2aef0b80-9555-11eb-8262-6b6259b3ae53.png)
 
+#### Using replit & uptimerobot ####
+Tutorial used:
+https://www.youtube.com/watch?v=SPTfmiYiuok
+
+
+
+4-4-2021 01:43
+4.5 hrs
