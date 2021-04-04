@@ -23,3 +23,8 @@ https://www.youtube.com/watch?v=SPTfmiYiuok
 
 4-4-2021 01:43
 4.5 hrs
+
+### Update ###
+4-4-2021 15:00
+-blurred & random background
+-bot usage shown in bot status
