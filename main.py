@@ -11,7 +11,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-    await client.change_presence(activity=discord.Game(name=f"in {len(client.guilds)} servers| $dse"))
+    await client.change_presence(activity=discord.Game(name=f"in {len(client.guilds)} servers| $dse")) #set status
 
 
 
@@ -28,7 +28,7 @@ async def on_message(message):
         print("Ping time: ", datetime.today())
         print(dse_2022 - time_now_hk)
         diff = (dse_2022 - time_now_hk).total_seconds()
-        line1 = "Time left 2022 dse"
+        line1 = "2022 DSE Time left"
         line2 = str(int(diff // (3600*24)))  + " days "
         line3 = str(int(diff%(3600*24)//3600)) + " Hours "
         line4 = str(int(diff%(3600*24)%3600//60)) + " Minutes"
@@ -36,23 +36,23 @@ async def on_message(message):
 
         #image processing
         #img_path = "resources/background" + str(counter) + ".jpg"
-        img_path = random.choice(os.listdir("resources/"))
+        img_path = random.choice(os.listdir("resources/")) #choose randome background
         print(img_path)
         img = Image.open("resources/" + img_path)
         width, height = img.size
         blurred_img = img.filter(ImageFilter.GaussianBlur(radius = 20))
         font = ImageFont.truetype('resources/futura.ttf', width//10)
         draw = ImageDraw.Draw(blurred_img)
-        draw.text((20, height//5), line1, (255,255,255),font=font)
+        draw.text((20, height//5), line1, (255,255,255),font=font) #put text with alignment
         draw.text((20, height//5*2), line2, (255,255,255),font=font)
         draw.text((20, height//5*3), line3, (255,255,255),font=font)
         draw.text((20, height//5*4), line4, (255,255,255),font=font)
-        blurred_img.save('output.jpg')
+        blurred_img.save('output.png') #use png as jpg and png can both be converted into png
 
         #await message.channel.send(text)
 
-        await message.channel.send(file=discord.File('output.jpg'))
-        os.remove("output.jpg")
+        await message.channel.send(file=discord.File('output.png'))
+        os.remove("output.png")
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
