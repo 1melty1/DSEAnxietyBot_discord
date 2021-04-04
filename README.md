@@ -1,7 +1,8 @@
 # DSEAnxietyBot_discord
 A bot that calculate the time remaining for preparing dse and send it to discord server.
 
-
+# Add it into your server #
+https://discord.com/api/oauth2/authorize?client_id=827889850396835870&permissions=67584&scope=bot
 
 # Working principle #
 
