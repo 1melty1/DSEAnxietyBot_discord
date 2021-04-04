@@ -35,40 +35,33 @@ async def on_message(message):
         #2022 dse: 31/3/2022 8:30am
 
         loading_message = await message.channel.send('Appending text into Image... plz wait') #send loading message
-        time.sleep(10) #delete loading message
-        #image processing
-        #img_path = "resources/background" + str(counter) + ".jpg"
+
         img_path = random.choice(os.listdir("resources/")) #choose randome background
         print(img_path)
         img = Image.open("resources/" + img_path)
         width, height = img.size
-        blurred_img = img.filter(ImageFilter.GaussianBlur(radius = 20))
-        font = ImageFont.truetype('resources/futura.ttf', width//10)
-        draw = ImageDraw.Draw(blurred_img)
+        if "c" in message.content:
+          final_img = img
+        else:
+          final_img = img.filter(ImageFilter.GaussianBlur(radius = 20))
+        font = ImageFont.truetype('futura.ttf', width//10)
+        draw = ImageDraw.Draw(final_img)
         draw.text((20, height//5), line1, (255,255,255),font=font) #put text with alignment
         draw.text((20, height//5*2), line2, (255,255,255),font=font)
         draw.text((20, height//5*3), line3, (255,255,255),font=font)
         draw.text((20, height//5*4), line4, (255,255,255),font=font)
 
-        '''if img_path[-4:] == ".png":
-          output_path = 'output.png'
-          blurred_img.save(output_path) #use png as background in png can only be converted into png
-        elif img_path[-4:] == ".jpg":
-          output_path = 'output.jpg' #use jpg when possible as it's much faster to export
-          blurred_img.save(output_path)'''
-
         output_path = 'output.png'
-        blurred_img.save(output_path)
+        final_img.save(output_path)
         
         await loading_message.delete() #delete the message before sending image
         
-        if os.path.exists("output.jpg") or os.path.exists("output.png"): #check if output file is generated and send correct message
+        if os.path.exists(output_path): #check if output file is generated and send correct message
           await message.channel.send(file=discord.File(output_path))
         else:
           await message.channel.send("Failed to export :(")
 
         #await message.channel.send(text)
-
         
         os.remove(output_path)
 
