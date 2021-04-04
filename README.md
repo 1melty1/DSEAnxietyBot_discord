@@ -30,5 +30,5 @@ https://www.youtube.com/watch?v=SPTfmiYiuok
 ![image](https://user-images.githubusercontent.com/53013464/113501005-e95e6080-9554-11eb-8d61-d55edb346178.png)
 
 *bot status update
-<img width="503" alt="Screenshot 2021-04-04 at 14 50 54" src="https://user-images.githubusercontent.com/53013464/113501040-2aef0b80-9555-11eb-8262-6b6259b3ae53.png">
+![image](https://user-images.githubusercontent.com/53013464/113501040-2aef0b80-9555-11eb-8262-6b6259b3ae53.png)
 
