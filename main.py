@@ -49,14 +49,28 @@ async def on_message(message):
         draw.text((20, height//5*2), line2, (255,255,255),font=font)
         draw.text((20, height//5*3), line3, (255,255,255),font=font)
         draw.text((20, height//5*4), line4, (255,255,255),font=font)
-        blurred_img.save('output.png') #use png as jpg and png can both be converted into png
 
+        '''if img_path[-4:] == ".png":
+          output_path = 'output.png'
+          blurred_img.save(output_path) #use png as background in png can only be converted into png
+        elif img_path[-4:] == ".jpg":
+          output_path = 'output.jpg' #use jpg when possible as it's much faster to export
+          blurred_img.save(output_path)'''
+
+        output_path = 'output.png'
+        blurred_img.save(output_path)
+        
         await loading_message.delete() #delete the message before sending image
+        
+        if os.path.exists("output.jpg") or os.path.exists("output.png"): #check if output file is generated and send correct message
+          await message.channel.send(file=discord.File(output_path))
+        else:
+          await message.channel.send("Failed to export :(")
 
         #await message.channel.send(text)
 
-        await message.channel.send(file=discord.File('output.png'))
-        os.remove("output.png")
+        
+        os.remove(output_path)
 
 
 
