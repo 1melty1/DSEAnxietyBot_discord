@@ -23,7 +23,7 @@ async def on_message(message):
 
     if message.content.startswith('$dse'):
         #time
-        dse_2022 = datetime(2022, 3, 31, 8, 30)
+        dse_2022 = datetime(2022, 4, 22, 8, 30)
         time_now_hk = datetime.today() - timedelta(hours=16) #16 is the time diff between server and hk
         print("Ping time: ", datetime.today())
         print(dse_2022 - time_now_hk)
@@ -32,6 +32,7 @@ async def on_message(message):
         line2 = str(int(diff // (3600*24)))  + " days "
         line3 = str(int(diff%(3600*24)//3600)) + " Hours "
         line4 = str(int(diff%(3600*24)%3600//60)) + " Minutes"
+        comment = "Count VA as the start. @DSE Anxiety bot"
         #2022 dse: 31/3/2022 8:30am
 
         loading_message = await message.channel.send('Appending text into Image... plz wait') #send loading message
@@ -45,11 +46,13 @@ async def on_message(message):
         else:
           final_img = img.filter(ImageFilter.GaussianBlur(radius = 20))
         font = ImageFont.truetype('futura.ttf', width//10)
+        comment_font = ImageFont.truetype('futura.ttf', width//50)
         draw = ImageDraw.Draw(final_img)
         draw.text((20, height//5), line1, (255,255,255),font=font) #put text with alignment
         draw.text((20, height//5*2), line2, (255,255,255),font=font)
         draw.text((20, height//5*3), line3, (255,255,255),font=font)
         draw.text((20, height//5*4), line4, (255,255,255),font=font)
+        draw.text((width-900, height-50), comment, (255,255,255),font=comment_font)
 
         output_path = 'output.png'
         final_img.save(output_path)
