@@ -15,7 +15,6 @@ https://discord.com/api/oauth2/authorize?client_id=827889850396835870&permission
 <img width="495" alt="Screenshot 2021-04-04 at 01 52 58" src="https://user-images.githubusercontent.com/53013464/113487075-7e774000-94e8-11eb-8271-dc3dd0946f58.png">
 
 
-
 ## Updates ##
 4-4-2021 15:00
 *blurred & random background
@@ -31,6 +30,8 @@ https://discord.com/api/oauth2/authorize?client_id=827889850396835870&permission
 Tutorial used:
 https://www.youtube.com/watch?v=SPTfmiYiuok
 
+
+<img width="747" alt="Screenshot 2021-06-25 at 00 05 41" src="https://user-images.githubusercontent.com/53013464/123296411-34cb4e00-d549-11eb-9ef9-48f80e70b17a.png">
 
 
 4-4-2021 01:43
