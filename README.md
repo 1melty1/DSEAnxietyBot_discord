@@ -23,7 +23,7 @@ https://discord.com/api/oauth2/authorize?client_id=827889850396835870&permission
 
 *bot status update
 </br>
-<img src="https://user-images.githubusercontent.com/53013464/113501040-2aef0b80-9555-11eb-8262-6b6259b3ae53.png" width="500">
+<img width="500" alt="Screenshot 2021-06-25 at 00 07 11" src="https://user-images.githubusercontent.com/53013464/123296528-4dd3ff00-d549-11eb-82e6-992cc0f7ac20.png">
 
 
 #### Using replit & uptimerobot ####
